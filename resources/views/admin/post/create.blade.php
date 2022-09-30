@@ -10,6 +10,14 @@
                 <div class="col-sm-6">
                     <h1 class="m-0">Добавить сатью</h1>
                 </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('post.index') }}">Статьи</a></li>
+                        <li class="breadcrumb-item active">Добавить сатью</li>
+                    </ol>
+                </div>
+
             </div><!-- /.row -->
             @include('layouts.components.admin.message')
         </div><!-- /.container-fluid -->
@@ -29,8 +37,8 @@
                                 <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill"
-                                            href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home"
-                                            aria-selected="true">O'zbekcha</a>
+                                            href="#custom-tabs-four-home" role="tab"
+                                            aria-controls="custom-tabs-four-home" aria-selected="true">O'zbekcha</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill"
@@ -45,6 +53,29 @@
                                 </ul>
                             </div>
                             <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Тип поста</label>
+                                    <select name="is_link" id="type"
+                                        class="form-control @error('is_link') is-invalid @enderror">
+                                        <option value="0" @if (old('is_link') == 0) selected @endif>Simple
+                                        </option>
+                                        <option value="1" @if (old('is_link') == 1) selected @endif>Link
+                                        </option>
+                                    </select>
+                                    @error('is_link')
+                                        <p class="text-danger small">{{ $message }}</p>
+                                    @enderror
+
+                                </div>
+                                <div class="form-group hide-if-old">
+                                    <label for="exampleInputEmail1">Link</label>
+                                    <input type="text" name="link"
+                                        class="form-control @error('link') is-invalid @enderror" id="exampleInputEmail1" value="{{ old('link') }}">
+                                    @error('link')
+                                        <p class="text-danger small">{{ $message }}</p>
+                                    @enderror
+
+                                </div>
                                 <div class="tab-content" id="custom-tabs-four-tabContent">
                                     <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-home-tab">
@@ -53,16 +84,14 @@
                                             <input type="text" name="title_uz"
                                                 class="form-control @error('password') is-invalid @enderror"
                                                 id="exampleInputEmail1" required value="{{ old('title_uz') }}">
-                                        @error('title_uz')
-                                            <p class="text-danger small">{{ $message }}</p>
-                                        @enderror
+                                            @error('title_uz')
+                                                <p class="text-danger small">{{ $message }}</p>
+                                            @enderror
 
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Qisqacha matn O'zbekcha</label>
-                                            <textarea name="short_uz" rows="5"
-                                                class="form-control @error('password') is-invalid @enderror"
-                                                required>{{ old('short_uz') }}</textarea>
+                                            <textarea name="short_uz" rows="5" class="form-control @error('password') is-invalid @enderror" required>{{ old('short_uz') }}</textarea>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
@@ -70,7 +99,7 @@
                                                 <p class="text-danger small">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group show-if-old">
                                             <label for="exampleInputEmail1">Matn O'zbekcha</label>
                                             <textarea name="text_uz" class="editor" required>{{ old('text_uz') }}</textarea>
                                             <div class="invalid-feedback">
@@ -97,8 +126,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Кароткий текст Русский</label>
-                                            <textarea name="short_ru" rows="5"
-                                                class="form-control @error('password') is-invalid @enderror">{{ old('short_ru') }}</textarea>
+                                            <textarea name="short_ru" rows="5" class="form-control @error('password') is-invalid @enderror">{{ old('short_ru') }}</textarea>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
@@ -106,7 +134,7 @@
                                                 <p class="text-danger small">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="form-group">
+                                        <div class show-if-old="form-group">
                                             <label for="exampleInputEmail1">Текст Русский</label>
                                             <textarea name="text_ru" class="editor">{{ old('text_ru') }}</textarea>
                                             <div class="invalid-feedback">
@@ -133,8 +161,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Short content English</label>
-                                            <textarea name="short_en" rows="5"
-                                                class="form-control @error('password') is-invalid @enderror">{{ old('short_en') }}</textarea>
+                                            <textarea name="short_en" rows="5" class="form-control @error('password') is-invalid @enderror">{{ old('short_en') }}</textarea>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
@@ -142,7 +169,7 @@
                                                 <p class="text-danger small">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="form-group">
+                                        <div class show-if-old="form-group">
                                             <label for="exampleInputEmail1">Content English</label>
                                             <textarea name="text_en" class="editor">{{ old('text_en') }}</textarea>
                                             <div class="invalid-feedback">
@@ -161,7 +188,9 @@
                                         <select name="category_id"
                                             class="form-control @error('password') is-invalid @enderror" required>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}" @if ($category->id == old('category_id')) selected @endif>{{ $category->title }}</option>
+                                                <option value="{{ $category->id }}"
+                                                    @if ($category->id == old('category_id')) selected @endif>
+                                                    {{ $category->title }}</option>
                                             @endforeach
                                         </select>
                                         <div class="invalid-feedback">
@@ -174,7 +203,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="feature_image">Изображение статьи</label>
-                                    <img src="{{ old('img') }}" alt="" class="img-uploaded" style="display: block; width: 300px">
+                                    <img src="{{ old('img') }}" alt="" class="img-uploaded"
+                                        style="display: block; width: 300px">
                                     <input type="text" name="img"
                                         class="form-control @error('password') is-invalid @enderror" id="feature_image"
                                         name="feature_image" value="{{ old('img') }}" readonly>
@@ -184,7 +214,8 @@
                                     @error('img')
                                         <p class="text-danger small">{{ $message }}</p>
                                     @enderror
-                                    <a href="" class="popup_selector" data-inputid="feature_image">Выбрать изображение</a>
+                                    <a href="" class="popup_selector" data-inputid="feature_image">Выбрать
+                                        изображение</a>
                                 </div>
                             </div>
                             <div class="card-footer">
