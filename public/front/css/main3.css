@@ -27,7 +27,8 @@ a {
 }
 
 a:hover {
-    color: var(--white);
+    /*color: var(--white);*/
+    color: #0d6efd;
 }
 
 ul {
@@ -658,7 +659,7 @@ p {
 }
 
 .table-head-extant tbody tr:not(.integrated) td {
-    height: 200px;
+    /*height: 200px;*/
 }
 
 .admission-schedule .table-head-extant tbody tr td {
@@ -711,7 +712,7 @@ p {
 
 /* tarkibiy tuzilma ro'yhati */
 .tuzilma-card {
-    height: 100%;
+    /*height: 100%;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -737,17 +738,22 @@ p {
     background-color: var(--primary-color);
 }
 
+.footer a {
+    color: #F3F3F3;
+    text-decoration: none;
+}
+
 .footer__messengers-parent {
     padding: 35px 0 35px 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    border-right: 1px solid #3A5276;
-    border-bottom: 1px solid #3A5276;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    /* border-right: 1px solid #3A5276;
+    border-bottom: 1px solid #3A5276; */
 }
 
 .footer__messengers-parent i {
-    font-size: 18px;
+    font-size: 12px;
     margin-right: 1.3rem;
 }
 
@@ -757,7 +763,7 @@ p {
     /* justify-content: space-between; */
     align-items: center;
     color: var(--white);
-    border-bottom: 1px solid #3A5276;
+    /* border-bottom: 1px solid #3A5276; */
 }
 .footer__exchange-parent p {
     margin-left: 15px;
@@ -774,10 +780,10 @@ p {
 
 .footer__connect_address {
     padding: 35px 30px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #3A5276;
+    /* border-bottom: 1px solid #3A5276; */
 }
 
 .footer__company-text,
@@ -890,7 +896,7 @@ p {
     width: 100%;
     font-size: 13px !important;
     white-space: normal;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding: 0.25rem 1rem;
 }
 
