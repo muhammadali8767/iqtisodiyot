@@ -20,7 +20,7 @@ return [
     "Davlat dasturlari" => "State programs",
     "Korrupsiyaga qarshi kurashish bo'yicha qabul qilingan hujjatlar" => "Adopted documents on combating corruption",
     "ALOQALAR" => "COMMUNICATIONS",
-    "Rahbariyat bo'limlari" => "Management departments",
+    "Rahbariyat bo'limlari" => "Departments of administration",
     "Hududiy bo'limlar" => "Regional departments",
     "Rahbariyat qabul kunlari" => "Leadership days",
     "MATBUOT UCHUN" => "FOR THE PRESS",
