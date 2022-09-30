@@ -21,7 +21,7 @@
                 <div class="d-flex align-items-center justify-content-end sort news-card-time">
                     <small class=" me-4">
                         <i class="fas fa-calendar me-1"></i>
-                        {{ $post->created_at->format('d/m/Y - H:i') }}
+                        {{ $post->created_at->setTimezone('Asia/Tashkent')->format('d/m/Y - H:i') }}
                     </small>
                     <span>
                         <i class="fas fa-eye me-1"></i>

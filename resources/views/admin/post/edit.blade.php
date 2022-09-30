@@ -10,6 +10,13 @@
                 <div class="col-sm-6">
                     <h1 class="m-0">Редактировать статью: {{ $post->title }}</h1>
                 </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('post.index') }}">Статьи</a></li>
+                        <li class="breadcrumb-item active">Редактировать сатью</li>
+                    </ol>
+                </div>
             </div><!-- /.row -->
             @include('layouts.components.admin.message')
         </div><!-- /.container-fluid -->
@@ -47,6 +54,29 @@
                                 </ul>
                             </div>
                             <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Тип поста</label>
+                                    <select name="is_link" id="type"
+                                        class="form-control @error('is_link') is-invalid @enderror">
+                                        <option value="0" @if ($post->is_link == 0) selected @endif>Simple
+                                        </option>
+                                        <option value="1" @if ($post->is_link == 1) selected @endif>Link
+                                        </option>
+                                    </select>
+                                    @error('is_link')
+                                        <p class="text-danger small">{{ $message }}</p>
+                                    @enderror
+
+                                </div>
+                                <div class="form-group hide-if-old">
+                                    <label for="exampleInputEmail1">Link</label>
+                                    <input type="text" name="link"
+                                        class="form-control @error('link') is-invalid @enderror" id="exampleInputEmail1" value="{{ old('link') }}">
+                                    @error('link')
+                                        <p class="text-danger small">{{ $message }}</p>
+                                    @enderror
+
+                                </div>
                                 <div class="tab-content" id="custom-tabs-four-tabContent">
                                     <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-home-tab">
@@ -68,7 +98,7 @@
                                             @enderror
 
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group show-if-old">
                                             <label for="exampleInputEmail1">Matn O'zbekcha</label>
                                             <textarea name="text_uz" class="editor">{{ $post->text_uz }}</textarea>
                                             @error('text_uz')
@@ -97,7 +127,7 @@
                                             @enderror
 
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group show-if-old">
                                             <label for="exampleInputEmail1">Текст Русский</label>
                                             <textarea name="text_ru" class="editor">{{ $post->text_ru }}</textarea>
                                             @error('text_ru')
@@ -126,7 +156,7 @@
                                             @enderror
 
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group show-if-old">
                                             <label for="exampleInputEmail1">Content English</label>
                                             <textarea name="text_en" class="editor">{{ $post->text_en }}</textarea>
                                             @error('text_en')

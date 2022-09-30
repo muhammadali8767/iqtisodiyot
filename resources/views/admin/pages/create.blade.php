@@ -53,20 +53,7 @@
                                 </ul>
                             </div>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <!-- select -->
-                                    <div class="form-group">
-                                        <label>Выберите тип страницы</label>
-                                        <select name="type" value="{{ old('type') }}" id="type"
-                                            class="form-control @error('type') is-invalid @enderror" required>
-                                            <option value="1">С боковой панелью</option>
-                                            <option value="2">С фото и подзаголовком</option>
-                                        </select>
-                                        @error('type')
-                                            <p class="text-danger small">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                </div>
+                               
 
                                 <div class="tab-content" id="custom-tabs-four-tabContent">
                                     <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel"

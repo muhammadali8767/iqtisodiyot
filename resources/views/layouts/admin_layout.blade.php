@@ -63,16 +63,21 @@
     <script src="/admin/admin.js"></script>
     <script>
         $(function() {
-            if ($("#type option:selected").val() != 2) {
+            if ($("#type option:selected").val() != 1) {
                 $('.hide-if-old').hide();
+                $('.show-if-old').show();
             } else {
                 $('.hide-if-old').show();
+                $('.show-if-old').hide();
             }
             $("#type").change(function() {
-                if ($("#type option:selected").val() != 2) {
+                console.log($("#type option:selected").val());
+                if ($("#type option:selected").val() != 1) {
                     $('.hide-if-old').hide();
+                    $('.show-if-old').show();
                 } else {
                     $('.hide-if-old').show();
+                    $('.show-if-old').hide();
                 }
             });
         });

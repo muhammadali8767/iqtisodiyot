@@ -41,7 +41,7 @@
                                 class="card-text d-flex align-items-center justify-content-between news-card-time">
                                 <small class="news-card-time">
                                     <i class="fas fa-calendar me-1"></i>
-                                    {{ $post->created_at->format('d/m/Y - H:i') }}
+                                    {{ $post->created_at->setTimezone('Asia/Tashkent')->format('d/m/Y - H:i') }}
                                 </small>
 
                                 <a href="{{ route('category_post', [$post->category->slug, $post->slug]) }}" class="news-card-link">

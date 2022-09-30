@@ -20,19 +20,22 @@
                     <div class="col-12 col-md-8">
                         <div class="card-body p-0">
                             <div class="at-vizitka">
-                                <h6>Telefon: <a href="tel: +998712326348"> (67) 235-03-95</a>
+                                <h6>Telefon: <a href="tel:+998672253261"> +998 (67) 225-32-61</a>
                                 </h6>
                                 <h6>Elektron pochta: <a
                                         href="mailTo:sirdaryo@mineconomy.uz"> sirdaryo@mineconomy.uz</a>
                                 </h6>
                                 <h6>Facebook: <a
-                                        href="https://www.facebook.com/mineconomy.uz">https://www.facebook.com/mineconomy.uz</a>
+                                        href="https://www.facebook.com/sirdeconomy">https://www.facebook.com/sirdeconomy</a>
+                                </h6>
+                                <h6>Instagram: <a
+                                        href="https://www.instagram.com/sirdeconomy.uz/">https://www.instagram.com/sirdeconomy.uz/</a>
                                 </h6>
                                 <h6>Telegram: <a
-                                        href="https://t.me/MineconomyUz">https://t.me/MineconomyUz</a>
+                                        href="https://t.me/sirdeconomy">https://t.me/sirdeconomy</a>
                                 </h6>
                                 <h6>YouTube: <a
-                                        href="https://www.youtube.com/channel/UCYib8rCrsF7z2MmTPbnwjgg">https://www.youtube.com/channel/UCYib8rCrsF7z2MmTPbnwjgg</a>
+                                        href="https://www.youtube.com/channel/UCJrg-jweIdz7zwcZdvzTJXQ">https://www.youtube.com/channel/UCJrg-jweIdz7zwcZdvzTJXQ</a>
                                 </h6>
                             </div>
                         </div>

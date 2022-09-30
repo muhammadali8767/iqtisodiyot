@@ -53,25 +53,7 @@
                                 </ul>
                             </div>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <!-- select -->
-                                    <div class="form-group">
-                                        <label>Выберите тип страницы</label>
-                                        <select name="type" id="type"
-                                            class="form-control @error('type') is-invalid @enderror" required>
-                                            <option value="1" @if ($page['type'] == 1) selected @endif>simple</option>
-                                            <option value="2" @if ($page['type'] == 2) selected @endif>new</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Please fill a valid data.
-                                        </div>
-                                        @error('type')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
+                                
                                 <div class="tab-content" id="custom-tabs-four-tabContent">
                                     <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-home-tab">

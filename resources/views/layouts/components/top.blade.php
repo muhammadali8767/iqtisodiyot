@@ -72,5 +72,21 @@
                 @endif
             </ul>
         </div>
+        @auth
+            @role('admin')
+            <div class="m-1">
+                <a href="{{ route('homeAdmin') }}" class="btn btn-info">Админка</a>
+
+            </div>
+            @endrole
+            <div class="m-1">
+                <ul class="navbar-nav ml-auto">
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button class="btn btn-danger" type="submit">Выход</button>
+                    </form>
+                </ul>
+            </div>
+        @endauth
     </div>
 </div>

@@ -44,15 +44,25 @@
                     </div>
                     <div class="col-12 col-md-8">
                         <div class="card-body p-0">
-                            <h5 class="card-title news-card-title">{{ $post->title }}</h5>
+                            <h5 class="card-title news-card-title">
+                                @if ($post->is_link)
+                                    <a href="{{ $post->link }}">{{ $post->title }}</a>
+                                @else
+                                    <a href="{{ route('category_post', [$post->category->slug, $post->slug]) }}">{{ $post->title }}</a>
+                                @endif
+                            </h5>
                             <p class="card-text news-card-text">
-                                {{ $post->short }}
+                                @if ($post->is_link)
+                                    <a href="{{ $post->link }}">{{ $post->short }}</a>
+                                @else
+                                    {{ $post->short }}
+                                @endif
                             </p>
                             <p
                                 class="card-text d-flex align-items-center justify-content-between news-card-time">
                                 <small class="news-card-time">
                                     <i class="fas fa-calendar me-1"></i>
-                                    {{ $post->created_at->format('d/m/Y - H:i') }}
+                                    {{ $post->created_at->setTimezone('Asia/Tashkent')->format('d/m/Y - H:i') }}
                                 </small>
                                 <a href="{{ route('post', $post->slug) }}" class="news-card-link">
                                     @lang('front.batafsil')

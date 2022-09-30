@@ -114,14 +114,14 @@
                                 <a href="https://pm.gov.uz/">@lang("menu.Jismoniy va yuridik shaxslar murojaatlari")</a>
                             </li>
                             <li>
-                                <a href="http://naveconomy.uz/uz/aloqa/37-zhismoniy-va-yuridik-shahslarning-murozhaatlari-bilan-ishlash-tartibi-trisidagi-nizom.html">@lang("menu.Jismoniy va yuridik shaxslarning murojaatlari bilan ishlash tartibi to'g'risidagi NIZOMI")</a>
+                                <a href="{{ route('page', 'jismoniy-va-yuridik-shaxslarning-murojaatlari-bilan-ishlash-tartibi-togrisidagi-nizom') }}">@lang("menu.Jismoniy va yuridik shaxslarning murojaatlari bilan ishlash tartibi to'g'risidagi NIZOMI")</a>
                             </li>
+                            <!--<li>-->
+                            <!--    <a href="http://naveconomy.uz/uz/aloqa/37-zhismoniy-va-yuridik-shahslarning-murozhaatlari-bilan-ishlash-tartibi-trisidagi-nizom.html">@lang("menu.Jismoniy va yuridik shaxslarning murojaatlari bilan ishlash tartibi to'g'risidagi NIZOMI")</a>-->
+                            <!--</li>-->
                             <li><a href="https://my.gov.uz">@lang("menu.Faoliyat sohasiga oid aholi va tadbirkorlik sub'ektlari tomonidan tez-tez beriladigan savollarga javoblar") </a>
                             </li>
                             <a href="tel: +998672350395">@lang("menu.Ishonch telefoni") +998 (67) 235-03-95</a>
-                    </li>
-                    <li>
-                        <a href="https://my.gov.uz">@lang("menu.Faoliyat sohasiga oid aholi va tadbirkorlik sub'ektlari tomonidan tez-tez beriladigan savollarga javoblar")</a>
                     </li>
                     <li>
                         <a href="https://my.gov.uz">@lang("menu.Veb-sayt xaritasi")</a>

@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="/front/css/all.min.css">
     <link rel="stylesheet" href="/front/libs/bootstrap.css">
-    <link rel="stylesheet" href="/front/css/main.css">
+    <link rel="stylesheet" href="/front/css/main3.css">
     <link rel="stylesheet" href="/front/css/media.css">
 </head>
 
